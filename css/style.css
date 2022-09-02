@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
 :root{
-    --green:#27ae60;
+    --light-blue:#0eb3c2;
     --black:#444;
     --light-color:#777;
     --bg-color:#e6e6e6;
@@ -63,7 +63,7 @@ section{
 
 .btn:hover{
     box-shadow: var(--box-shadow-inset);
-    color:var(--green);
+    color:var(--light-blue);
 }
 
 .heading{
@@ -75,7 +75,7 @@ section{
 }
 
 .heading span{
-    color:var(--green);
+    color:var(--light-blue);
     text-transform: uppercase;
 }
 
@@ -106,7 +106,7 @@ section{
 }
 
 .header .user p{
-    color:var(--green);
+    color:var(--light-blue);
     font-size: 1.5rem;
 }
 
@@ -126,7 +126,7 @@ section{
 
 .header .navbar a:hover{
     box-shadow: var(--box-shadow-inset);
-    color: var(--green);
+    color: var(--light-blue);
 }
 
 #menu-btn{
@@ -147,7 +147,7 @@ section{
 }
 
 #menu-btn:hover{
-    color:var(--green);
+    color:var(--light-blue);
     box-shadow: var(--box-shadow-inset);
 }
 
@@ -168,7 +168,7 @@ section{
 }
 
 #theme-toggler:hover{
-    color:var(--green);
+    color:var(--light-blue);
     box-shadow: var(--box-shadow-inset);
 }
 
@@ -189,7 +189,7 @@ section{
 
 .home .content p{
     font-size: 2rem;
-    color:var(--green);
+    color:var(--light-blue);
     padding-bottom: .5rem;
 }
 
@@ -212,9 +212,29 @@ section{
     border-radius: .5rem;
 }
 
-.home .share a:hover{
+.home .share a.fa-telegram:hover{
     box-shadow: var(--box-shadow-inset);
-    color:var(--green);
+    color:#00B0F1;
+}
+
+.home .share a.fa-facebook-f:hover{
+    box-shadow: var(--box-shadow-inset);
+    color:#4064AC;
+}
+
+.home .share a.fa-twitter:hover{
+    box-shadow: var(--box-shadow-inset);
+    color:#41B7E8;
+}
+
+.home .share a.fa-linkedin:hover{
+    box-shadow: var(--box-shadow-inset);
+    color:#0076B0;
+}
+
+.home .share a.fa-github:hover{
+    box-shadow: var(--box-shadow-inset);
+    color:#000000;
 }
 
 .about .row{
@@ -262,7 +282,7 @@ section{
 }
 
 .about .row .content h3 span{
-    color:var(--green);
+    color:var(--light-blue);
 }
 
 .about .row .content p{
@@ -300,7 +320,7 @@ section{
 .about .row .progress .bar span{
     display: block;
     height: 100%;
-    background: var(--green);
+    background: var(--light-blue);
     border-radius: 5rem;
 }
 
@@ -367,7 +387,7 @@ section{
     top:0; left: 0;
     height: 100%;
     width: 100%;
-    background: var(--green);
+    background: var(--light-blue);
     z-index: -1;
     clip-path: circle(9rem at 5% 0%);
     transition: .3s linear;
@@ -470,7 +490,7 @@ section{
 }
 
 .credits span{
-    color: var(--green);
+    color: var(--light-blue);
 }
 
 @media (max-width:991px){
