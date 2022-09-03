@@ -1,0 +1,162 @@
+:root {
+    --primary-light: #39ddfa;
+    --primary: #00abdf;
+    --primary-dark: #008ada;
+    
+
+    --white: #fff;
+    --greyLight-1: #ebf5fc;
+    --greyLight-2: #d5e0f3;
+    --greyLight-3: #c1d9f0;
+    --greyDark: #646b8c;
+}
+
+/* original */
+:root{
+    --light-blue:#0eb3c2;
+    --black:#444;
+    --light-color:#777;
+    --light-low-color:rgb(165, 165, 165);
+    --bg-color:#e6e6e6;
+    --border:.1rem solid rgba(0,0,0,.2);
+    --box-shadow:.4rem .4rem 1rem #ccc,
+                -.4rem -.4rem 1rem #fff;
+    --box-shadow-inset:.4rem .4rem 1rem #ccc inset,
+                      -.4rem -.4rem 1rem #fff inset;
+}
+
+
+
+.skills .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    gap:2rem;
+}
+
+.skills .box-container .box{
+    border-radius: .5rem;
+    position: relative;
+    z-index: 0;
+    /* overflow:hidden; */
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+.skills .card__percent {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.skills .circle-info-box {
+	position: absolute;
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills .img-box {
+	height: 3.6rem;
+    width: 3.6rem;
+    border-radius: 50%;
+    margin-bottom: .7rem;
+    box-shadow: var(--box-shadow);
+}
+
+.skills img {
+	height: 3.4rem;
+    width: 3.4rem;
+    border-radius: 50%;
+}
+
+.skills .card-title {
+	color: var(--light-color);
+    font-weight: 600;
+	font-size: 1.6rem;
+}
+
+.skills .card-title-long {
+	color: var(--light-color);
+    font-weight: 600;
+	font-size: 1.2rem;
+	font-family: 'DM Sans', sans-serif;
+}
+
+.skills .card__number {
+	color: var(--light-low-color);
+	font-size: 1.3rem;
+	font-family: 'DM Sans', sans-serif;
+}
+
+.skills svg {
+	position: relative;
+	height: 12rem;
+    width: 12rem;
+	z-index: 1000;
+	transform: rotate(-90deg);
+}
+
+/* stroke-dashoffset formula = [565.49 - (565.49 * input.value) / 100] */
+.skills svg circle {
+	width: 100%;
+	height: 100%;
+	fill: none;
+	stroke-linecap: round;
+	transform: translate(.7rem, .85rem);
+	stroke-dasharray: 325;
+	stroke-dashoffset: 35;
+	transition: all 1s ease;
+	stroke-width: 6;
+}
+
+.skills .circle {
+	position: absolute;
+	width: 12rem;
+	height: 12rem;
+	border-radius: 50%;
+	box-shadow: var(--box-shadow);
+	background: var(--bg-color);
+}
+
+.skills .circle__medium {
+	width: 11rem;
+	height: 11rem;
+	box-shadow: var(--box-shadow-inset);
+}
+
+.skills .circle__small {
+	width: 9.5rem;
+	height: 9.5rem;
+	box-shadow: var(--box-shadow);
+}
+
+
+@media (max-width: 991px) {
+    .skills svg circle {
+        r: 46;
+        cx: 46;
+        cy: 46;
+    }
+}
+
+@media (max-width: 450px) {
+    .skills svg circle {
+        r: 41;
+        cx: 41;
+        cy: 41;
+    }
+}
