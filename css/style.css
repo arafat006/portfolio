@@ -11,6 +11,9 @@
                 -.4rem -.4rem 1rem #fff;
     --box-shadow-inset:.4rem .4rem 1rem #ccc inset,
                       -.4rem -.4rem 1rem #fff inset;
+    --primary-light: #39ddfa;
+    --primary: #00abdf;
+    --primary-dark: #008ada;
 }
 
 *{
