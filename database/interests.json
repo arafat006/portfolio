@@ -1,0 +1,38 @@
+[
+    {
+        "title": "Chess",
+        "imgPath": "image/interests/chess.png"
+    },
+    {
+        "title": "Tame Bird",
+        "imgPath": "image/interests/bird.png"
+    },
+    {
+        "title": "Programming",
+        "imgPath": "image/interests/programming.png"
+    },
+    {
+        "title": "Watch Movies",
+        "imgPath": "image/interests/movie.png"
+    },
+    {
+        "title": "Tree Planting",
+        "imgPath": "image/interests/tree.png"
+    },
+    {
+        "title": "Painting",
+        "imgPath": "image/interests/painting.png"
+    },
+    {
+        "title": "Gaming",
+        "imgPath": "image/interests/game.png"
+    },
+    {
+        "title": "Kite Flying",
+        "imgPath": "image/interests/kite.png"
+    },
+    {
+        "title": "New Techs",
+        "imgPath": "image/interests/tech.png"
+    }
+]

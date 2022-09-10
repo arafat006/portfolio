@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/tools.css">
     <link rel="stylesheet" href="css/experiences.css">
     <link rel="stylesheet" href="css/portfolio.css">
+    <link rel="stylesheet" href="css/certificates.css">
+    <link rel="stylesheet" href="css/interests.css">
 </head>
 
 <body>
@@ -34,6 +36,8 @@
             <a href="#tools">Tools</a>
             <a href="#experiences">Experiences</a>
             <a href="#portfolio">Portfolio</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#interests">Interests</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -196,10 +200,8 @@
     </section>
 
     <section class="skills" id="skills">
-
         <h1 class="heading"> My <span>Skills</span> </h1>
         <div class="box-container" id="skills-container">
-
         </div>
     </section>
 
@@ -242,10 +244,23 @@
         </div>
     </section>
 
-
     <section class="portfolio" id="portfolio">
         <h1 class="heading"> my <span>portfolio</span> </h1>
         <div class="box-container" id="portfolio-container">
+        </div>
+    </section>
+
+    <section class="certificates" id="certificates">
+        <h1 class="heading"> My <span>Certificates</span> </h1>
+        <div class="row">
+            <div class="box-container" id="certificates-container">
+            </div>
+        </div>
+    </section>
+
+    <section class="interests" id="interests">
+        <h1 class="heading"> My <span>Interests</span> </h1>
+        <div class="box-container" id="interests-container">
         </div>
     </section>
 
@@ -318,6 +333,34 @@
                     ' </div>';
         }
 
+        function createCertificateBox(title, institution, date, imgPath, description){
+            return '<div class="box">'+
+                        '<div class="certificate-content">'+
+                            '<img src="'+imgPath+'" alt="">'+
+                            '<h3>'+title+'</h3>'+
+                            '<p class="subject">'+institution+'</p>'+
+                            '<p class="date">'+date+'</p>'+
+                            '<p>'+description+'</p>'+
+                        '</div>'+
+                        '<div class="hover-img" style="background-image: url(../'+imgPath+');"></div>'+
+                    '</div>';
+        }
+
+        function createInteresteBox(title, imgPath){
+            return '<div class="box">'+
+                        '<div class="interest-box-parent">'+
+                            '<div class="interest-box">'+
+                                '<div class="interest-box-border">'+
+                                    '<div class="title">'+title+'</div>'+
+                                    '<div class="background"></div>'+
+                                    '<img src="'+imgPath+'" alt="'+title+'">'+
+                                    '</div>'+
+                                '</div>'+
+                            '</div>'+
+                        '</div>'+
+                    '</div>';
+        }
+
         $(document).ready(function () {
 
             //Skills creation
@@ -378,7 +421,6 @@
                 //Skills loading failed...
             }); 
 
-
             //Tools creation
             $.getJSON('database/tools.json', function(toolList){
                 toolList.forEach(tool => {
@@ -396,6 +438,24 @@
             }).fail(function(){
                 //Tools loading failed...
             }); 
+
+            //Certificate creation
+            $.getJSON('database/certificates.json', function(certificateList){
+                certificateList.forEach(certificate => {
+                    $(createCertificateBox(certificate.title, certificate.institution, certificate.date, certificate.imgPath, certificate.description)).appendTo('#certificates-container');
+                });
+            }).fail(function(){
+                //Tools loading failed...
+            });
+
+            //Interests creation
+            $.getJSON('database/interests.json', function(interestList){
+                interestList.forEach(interest => {
+                    $(createInteresteBox(interest.title, interest.imgPath)).appendTo('#interests-container');
+                });
+            }).fail(function(){
+                //Tools loading failed...
+            });
 
             $(window).on('resize', function() {
                 drawSkillPercentCircle(currentSkillList);

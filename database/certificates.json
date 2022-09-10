@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Secondary School Certificate",
+        "institution": "Rajshahi Collegiate School",
+        "date": "17 May, 2014",
+        "imgPath": "image/certificates/ssc.jpg",
+        "description": "A certificate for completing all courses successfully in Secondary School"
+    },
+    {
+        "title": "Higher Secondary School Certificate",
+        "institution": "Rajshahi City College",
+        "date": "18 August, 2016",
+        "imgPath": "image/certificates/hsc.jpg",
+        "description": "A certificate for completing all courses successfully in Higher Secondary School"
+    },
+    {
+        "title": "Home Automation (IOT)",
+        "institution": "United International University",
+        "date": "9 December, 2019",
+        "imgPath": "image/certificates/iot.jpg",
+        "description": "Home automation project by IOT that makes easy to control home appliances"
+    },
+    {
+        "title": "BSc in Computer Science & Engineering",
+        "institution": "United International University",
+        "date": "18 May, 2022",
+        "imgPath": "image/certificates/bsc.jpg",
+        "description": "A certificate for completing Bachelor of Science in Computer Science & Engineering"
+    },
+    {
+        "title": "Convolutional Neural Networks in TensorFlow",
+        "institution": "Coursera",
+        "date": "11 September, 2020",
+        "imgPath": "image/certificates/cnntf.png",
+        "description": "An online non-credit course authorized by DeepLearning.AI and offered through Coursera"
+    },
+    {
+        "title": "Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning",
+        "institution": "Coursera",
+        "date": "7 August, 2020",
+        "imgPath": "image/certificates/itfai.png",
+        "description": "An online non-credit course authorized by DeepLearning.AI and offered through Coursera"
+    }
+]
