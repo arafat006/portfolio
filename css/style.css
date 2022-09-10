@@ -46,8 +46,13 @@ body.active{
 }
 
 section{
-    min-height: 100vh;
     padding:2rem;
+}
+
+
+section#home{
+    height: 100vh;
+    min-height: 500px;
 }
 
 .btn{

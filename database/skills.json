@@ -1,0 +1,202 @@
+[
+    {
+        "title": "HTML",
+        "imgPath": "image/skills/html.png",
+        "percent": 97
+    },
+    {
+        "title": "CSS",
+        "imgPath": "image/skills/css.png",
+        "percent": 95
+    },
+    {
+        "title": "Bootstrap",
+        "imgPath": "image/skills/bootstrap.png",
+        "percent": 85
+    },
+    {
+        "title": "JavaScript",
+        "imgPath": "image/skills/js.png",
+        "percent": 92
+    },
+    {
+        "title": "JQuery",
+        "imgPath": "image/skills/jquery.png",
+        "percent": 94
+    },
+    {
+        "title": "AJAX",
+        "imgPath": "image/skills/ajax.png",
+        "percent": 94
+    },
+    {
+        "title": "TypeScript",
+        "imgPath": "image/skills/typescript.png",
+        "percent": 90
+    },
+    {
+        "title": "PHP",
+        "imgPath": "image/skills/php.png",
+        "percent": 80
+    },
+    {
+        "title": "C",
+        "imgPath": "image/skills/c.png",
+        "percent": 99
+    },
+    {
+        "title": "C++",
+        "imgPath": "image/skills/c++.png",
+        "percent": 96
+    },
+    {
+        "title": "C#",
+        "imgPath": "image/skills/csharp.png",
+        "percent": 96
+    },
+    {
+        "title": "Java",
+        "imgPath": "image/skills/java.png",
+        "percent": 85
+    },
+    {
+        "title": "Matlab",
+        "imgPath": "image/skills/matlab.png",
+        "percent": 80
+    },
+    {
+        "title": "Python",
+        "imgPath": "image/skills/python.png",
+        "percent": 86
+    },
+    {
+        "title": "Arduino",
+        "imgPath": "image/skills/arduino.png",
+        "percent": 80
+    },
+    {
+        "title": "Dart",
+        "imgPath": "image/skills/dart.png",
+        "percent": 80
+    },
+    {
+        "title": "F#",
+        "imgPath": "image/skills/fsharp.png",
+        "percent": 85
+    },
+    {
+        "title": "AngularJS",
+        "imgPath": "image/skills/angularjs.png",
+        "percent": 95
+    },
+    {
+        "title": "Angular",
+        "imgPath": "image/skills/angular.png",
+        "percent": 96
+    },
+    {
+        "title": ".Net Core",
+        "imgPath": "image/skills/dotnetcore.png",
+        "percent": 96
+    },
+    {
+        "title": "Blazor",
+        "imgPath": "image/skills/blazor.png",
+        "percent": 92
+    },
+    {
+        "title": "Web API",
+        "imgPath": "image/skills/webapi.png",
+        "percent": 98
+    },
+    {
+        "title": "Azure Function",
+        "imgPath": "image/skills/azurefuntion.png",
+        "percent": 94
+    },
+    {
+        "title": "Firebase",
+        "imgPath": "image/skills/firebase.png",
+        "percent": 90
+    },
+    {
+        "title": "Flutter",
+        "imgPath": "image/skills/flutter.png",
+        "percent": 90
+    },
+    {
+        "title": "Selenium",
+        "imgPath": "image/skills/selenium.png",
+        "percent": 80
+    },
+    {
+        "title": "EF Core",
+        "imgPath": "image/skills/efcore.png",
+        "percent": 92
+    },
+    {
+        "title": "gRPC",
+        "imgPath": "image/skills/grpc.png",
+        "percent": 90
+    },
+    {
+        "title": "Git",
+        "imgPath": "image/skills/git.png",
+        "percent": 98
+    },
+    {
+        "title": "Unity",
+        "imgPath": "image/skills/unity.png",
+        "percent": 92
+    },
+    {
+        "title": "My SQL",
+        "imgPath": "image/skills/mysql.png",
+        "percent": 94
+    },
+    {
+        "title": "Microsoft SQL",
+        "imgPath": "image/skills/mssql.png",
+        "percent": 90
+    },
+    {
+        "title": "MS Word",
+        "imgPath": "image/skills/msword.png",
+        "percent": 98
+    },
+    {
+        "title": "CSV",
+        "imgPath": "image/skills/csv.png",
+        "percent": 98
+    },
+    {
+        "title": "Excel",
+        "imgPath": "image/skills/excel.png",
+        "percent": 90
+    },
+    {
+        "title": "PowerPoint",
+        "imgPath": "image/skills/powerpoint.png",
+        "percent": 96
+    },
+    {
+        "title": "Photoshop",
+        "imgPath": "image/skills/photoshop.png",
+        "percent": 90
+    },
+    {
+        "title": "Illustrator",
+        "imgPath": "image/skills/illustrator.png",
+        "percent": 92
+    },
+    {
+        "title": "Premiere Pro",
+        "imgPath": "image/skills/premierepro.png",
+        "percent": 60
+    },
+    {
+        "title": "Adobe XD",
+        "imgPath": "image/skills/xd.png",
+        "percent": 70
+    }
+]

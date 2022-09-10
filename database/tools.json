@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Visual Studio",
+        "imgPath": "image/tools/vs.png"
+    },
+    {
+        "title": "Visual Studio Code",
+        "imgPath": "image/tools/vscode.png"
+    },
+    {
+        "title": "Code Blocks",
+        "imgPath": "image/tools/codeblocks.png"
+    },
+    {
+        "title": "Brackets",
+        "imgPath": "image/tools/brackets.png"
+    },
+    {
+        "title": "Unity",
+        "imgPath": "image/tools/unity.png"
+    },
+    {
+        "title": "Source Tree",
+        "imgPath": "image/tools/sourcetree.png"
+    },
+    {
+        "title": "Colab",
+        "imgPath": "image/tools/colab.png"
+    },
+    {
+        "title": "Github",
+        "imgPath": "image/tools/github.png"
+    },
+    {
+        "title": "Azure DevOps",
+        "imgPath": "image/tools/azuredevops.png"
+    },
+    {
+        "title": "Pivotal Tracker",
+        "imgPath": "image/tools/pivotaltracker.png"
+    },
+    {
+        "title": "Discord",
+        "imgPath": "image/tools/discord.png"
+    },
+    {
+        "title": "Notepad++",
+        "imgPath": "image/tools/notepad++.png"
+    },
+    {
+        "title": "Slack",
+        "imgPath": "image/tools/slack.png"
+    },
+    {
+        "title": "Trello",
+        "imgPath": "image/tools/trello.png"
+    },
+    {
+        "title": "Bit Bucket",
+        "imgPath": "image/tools/bitbucket.png"
+    },
+    {
+        "title": "PyCharm",
+        "imgPath": "image/tools/pycharm.png"
+    },
+    {
+        "title": "IntelliJ",
+        "imgPath": "image/tools/intellij.png"
+    },
+    {
+        "title": "Android Studio",
+        "imgPath": "image/tools/androidstudio.png"
+    }
+]

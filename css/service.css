@@ -50,3 +50,40 @@
 .services .box-container .box:hover > *{
     color:#fff;
 }
+
+.services .box-container .box:hover > .fa-bug{
+    color:rgb(255, 0, 0);
+}
+
+.services .box-container .box:hover > .fa-wrench{
+    color:rgb(255, 98, 0);
+}
+
+.services .box-container .box:hover > .fa-fire{
+    color:rgb(255, 230, 0);
+}
+
+.services .box-container .box:hover > .fa-lightbulb{
+    color:rgb(255, 255, 0);
+}
+
+.services .box-container .box:hover > .fa-robot{
+    color:rgb(0, 255, 128);
+}
+
+.services .box-container .box:hover > .fa-gamepad{
+    color:rgb(0, 47, 255);
+}
+
+.services .box-container .box:hover > .fa-mobile-alt{
+    color:rgb(142, 0, 251);
+}
+
+.services .box-container .box:hover > .fa-globe{
+    color:rgb(0, 255, 208);
+}
+
+.services .box-container .box:hover > .fa-code{
+    color:rgb(0, 255, 136);
+}
+

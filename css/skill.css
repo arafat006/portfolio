@@ -75,6 +75,9 @@
     border-radius: 50%;
     margin-bottom: .7rem;
     box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .skills img {
@@ -110,15 +113,12 @@
 	transform: rotate(-90deg);
 }
 
-/* stroke-dashoffset formula = [565.49 - (565.49 * input.value) / 100] */
 .skills svg circle {
 	width: 100%;
 	height: 100%;
 	fill: none;
 	stroke-linecap: round;
-	transform: translate(.7rem, .85rem);
-	stroke-dasharray: 325;
-	stroke-dashoffset: 35;
+	transform: translate(.88rem, .88rem);
 	transition: all 1s ease;
 	stroke-width: 6;
 }
@@ -145,16 +145,26 @@
 }
 
 
+.skills svg circle {
+	stroke-dasharray: 325;
+	stroke-dashoffset: 325;
+    r: 51;
+    cx: 51;
+    cy: 51;
+}
+
 @media (max-width: 991px) {
     .skills svg circle {
-        r: 46;
-        cx: 46;
-        cy: 46;
+        stroke-dasharray: 328;
+        r: 45;
+        cx: 45;
+        cy: 45;
     }
 }
 
 @media (max-width: 450px) {
     .skills svg circle {
+        stroke-dasharray: 251;
         r: 41;
         cx: 41;
         cy: 41;
