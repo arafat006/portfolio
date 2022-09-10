@@ -1,0 +1,32 @@
+[
+    {
+        "title": "Weather Forecast",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptates temporibus rerum fugiat officia obcaecati praesentium. Voluptatem architecto cum perspiciatis, et est amet, esse minima dicta sed voluptate modi suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex voluptates temporibus rerum, fugiat officia obcaecati praesentium. Voluptatem architecto cum perspiciatis, et est amet, esse minima dicta sed voluptate modi suscipit.",
+        "imgPath": "image/portfolio/project1.png"
+    },
+    {
+        "title": "Weather Forecast 2",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptates temporibus rerum fugiat officia obcaecati praesentium. Voluptatem architecto cum perspiciatis, et est amet, esse minima dicta sed voluptate modi suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex voluptates temporibus rerum, fugiat officia obcaecati praesentium. Voluptatem architecto cum perspiciatis, et est amet, esse minima dicta sed voluptate modi suscipit.",
+        "imgPath": "image/portfolio/project2.png"
+    },
+    {
+        "title": "BMI Calculator",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptates temporibus rerum fugiat officia obcaecati praesentium. Voluptatem architecto cum perspiciatis, et est amet, esse minima dicta sed voluptate modi suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex voluptates temporibus rerum, fugiat officia obcaecati praesentium. Voluptatem architecto cum perspiciatis, et est amet, esse minima dicta sed voluptate modi suscipit.",
+        "imgPath": "image/portfolio/project3.png"
+    },
+    {
+        "title": "AI",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptates temporibus rerum fugiat officia obcaecati praesentium. Voluptatem architecto cum perspiciatis, et est amet, esse minima dicta sed voluptate modi suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex voluptates temporibus rerum, fugiat officia obcaecati praesentium. Voluptatem architecto cum perspiciatis, et est amet, esse minima dicta sed voluptate modi suscipit.",
+        "imgPath": "image/portfolio/project4.png"
+    },
+    {
+        "title": "AI 2",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptates temporibus rerum fugiat officia obcaecati praesentium. Voluptatem architecto cum perspiciatis, et est amet, esse minima dicta sed voluptate modi suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex voluptates temporibus rerum, fugiat officia obcaecati praesentium. Voluptatem architecto cum perspiciatis, et est amet, esse minima dicta sed voluptate modi suscipit.",
+        "imgPath": "image/portfolio/project5.png"
+    },
+    {
+        "title": "City Building Game",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex voluptates temporibus rerum fugiat officia obcaecati praesentium. Voluptatem architecto cum perspiciatis, et est amet, esse minima dicta sed voluptate modi suscipit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex voluptates temporibus rerum, fugiat officia obcaecati praesentium. Voluptatem architecto cum perspiciatis, et est amet, esse minima dicta sed voluptate modi suscipit.",
+        "imgPath": "image/portfolio/project6.png"
+    }
+]

@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/skill.css">
     <link rel="stylesheet" href="css/tools.css">
     <link rel="stylesheet" href="css/experiences.css">
+    <link rel="stylesheet" href="css/portfolio.css">
 </head>
 
 <body>
@@ -242,47 +243,11 @@
     </section>
 
 
-    <!-- <section class="portfolio" id="portfolio">
-    <h1 class="heading"> my <span>portfolio</span> </h1>
-    <div class="box-container">
-        <div class="box">
-            <img src="image/img-1.jpg" alt="">
-            <div class="content">
-                <h3>project 01</h3>
-            </div>
+    <section class="portfolio" id="portfolio">
+        <h1 class="heading"> my <span>portfolio</span> </h1>
+        <div class="box-container" id="portfolio-container">
         </div>
-        <div class="box">
-            <img src="image/img-2.jpg" alt="">
-            <div class="content">
-                <h3>project 02</h3>
-            </div>
-        </div>
-        <div class="box">
-            <img src="image/img-3.jpg" alt="">
-            <div class="content">
-                <h3>project 03</h3>
-            </div>
-        </div>
-        <div class="box">
-            <img src="image/img-4.jpg" alt="">
-            <div class="content">
-                <h3>project 04</h3>
-            </div>
-        </div>
-        <div class="box">
-            <img src="image/img-5.jpg" alt="">
-            <div class="content">
-                <h3>project 05</h3>
-            </div>
-        </div>
-        <div class="box">
-            <img src="image/img-6.jpg" alt="">
-            <div class="content">
-                <h3>project 06</h3>
-            </div>
-        </div>
-    </div>
-</section> -->
+    </section>
 
     <section class="contact" id="contact">
         <h1 class="heading"> <span>contact</span> me </h1>
@@ -341,6 +306,16 @@
                         '</div>'+
                     '</div>'+
                 '</div>';
+        }
+
+        function createPortfolioBox(title, description, imgPath){
+            return '<div class="box">'+
+                        '<img src="'+imgPath+'" alt="">'+
+                        '<div class="content">'+
+                            '<h3>'+title+'</h3>'+
+                            '<p>'+description+'</p>'+
+                        '</div>'+
+                    ' </div>';
         }
 
         $(document).ready(function () {
@@ -413,9 +388,14 @@
                 //Tools loading failed...
             }); 
 
-
-
-
+            //Portfolio creation
+            $.getJSON('database/portfolio.json', function(portfolioList){
+                portfolioList.forEach(portfolio => {
+                    $(createPortfolioBox(portfolio.title, portfolio.description, portfolio.imgPath)).appendTo('#portfolio-container');
+                });
+            }).fail(function(){
+                //Tools loading failed...
+            }); 
 
             $(window).on('resize', function() {
                 drawSkillPercentCircle(currentSkillList);

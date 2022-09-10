@@ -40,6 +40,7 @@
     height: 6rem;
     width: 6rem;
     box-shadow: var(--box-shadow);
+    background-color: #E6E6E6;
 }
 
 .experiences .row .box-container .box h3{
