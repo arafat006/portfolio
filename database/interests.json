@@ -4,15 +4,16 @@
         "imgPath": "image/interests/chess.png"
     },
     {
-        "title": "Tame Bird",
+        "title": "Bird Taming",
         "imgPath": "image/interests/bird.png"
     },
     {
         "title": "Programming",
-        "imgPath": "image/interests/programming.png"
+        "imgPath": "image/interests/programming.png",
+        "size": "large"
     },
     {
-        "title": "Watch Movies",
+        "title": "Watching Movies",
         "imgPath": "image/interests/movie.png"
     },
     {
@@ -32,7 +33,8 @@
         "imgPath": "image/interests/kite.png"
     },
     {
-        "title": "New Techs",
-        "imgPath": "image/interests/tech.png"
+        "title": "New Technologies",
+        "imgPath": "image/interests/tech.png",
+        "size": "large"
     }
 ]
