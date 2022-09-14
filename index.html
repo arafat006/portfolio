@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/education.css">
     <link rel="stylesheet" href="css/service.css">
     <link rel="stylesheet" href="css/skill.css">
@@ -24,7 +25,12 @@
 
     <header class="header">
         <div class="user">
-            <img src="image/about/user-img.png" alt="">
+            <div class="img-container" id="profile-img-container">
+                <div class="img-box" id="profile-img-box">
+                    <div class="img-box" id="profile-img-shine"></div>
+                    <img src="image/about/user-avatar.png" alt="">
+                </div>
+            </div>
             <h3>MD. Arafat Hossain</h3>
             <p>Software Engineer</p>
         </div>
@@ -36,7 +42,7 @@
             <a href="#skills">Skills</a>
             <a href="#tools">Tools</a>
             <a href="#experiences">Experiences</a>
-            <a href="#portfolio">Portfolio</a>
+            <a href="#portfolio">Projects</a>
             <a href="#certificates">Certificates</a>
             <a href="#interests">Interests</a>
             <a href="#contact">Contact</a>
@@ -129,7 +135,10 @@
             <div class="box-container">
 
                 <div class="box">
-                    <img src="image/education/rajshahi_collegiate_school.jpg" alt="">
+                    <div class="education-img-container">
+                        <div class="education-shine"></div>
+                        <img src="image/education/rajshahi_collegiate_school.jpg" alt="">
+                    </div>
                     <h3>Rajshahi Collegiate School</h3>
                     <p>Secondary School Certificate</p>
                     <p class="subject">Science</p>
@@ -140,7 +149,10 @@
                 <div class="vertical-line"></div>
 
                 <div class="box">
-                    <img src="image/education/rajshahi_city_college.jpeg" alt="">
+                    <div class="education-img-container">
+                        <div class="education-shine"></div>
+                        <img src="image/education/rajshahi_city_college.jpeg" alt="">
+                    </div>
                     <h3>Rajshahi Government City College</h3>
                     <p>Higher Secondary Certificate</p>
                     <p class="subject">Science</p>
@@ -151,7 +163,10 @@
                 <div class="vertical-line"></div>
 
                 <div class="box">
-                    <img src="image/education/uiu.png" alt="">
+                    <div class="education-img-container">
+                        <div class="education-shine"></div>
+                        <img src="image/education/uiu.png" alt="">
+                    </div>
                     <h3>United International University</h3>
                     <p>Bachelor of Science - BS</p>
                     <p class="subject">Computer Science & Engineering</p>
@@ -241,7 +256,10 @@
             <div class="box-container">
 
                 <div class="box">
-                    <img src="image/experiences/upwork.png" alt="">
+                    <div class="experience-img-container">
+                        <div class="experience-shine"></div>
+                        <img src="image/experiences/upwork.png" alt="">
+                    </div>
                     <h3>Upwork</h3>
                     <p>Working as a <i class="work-title-upwork">Freelancer</i></p>
                     <p class="subject">Part-time job</p>
@@ -249,7 +267,10 @@
                 </div>
 
                 <div class="box">
-                    <img src="image/experiences/freelancer.png" alt="">
+                    <div class="experience-img-container">
+                        <div class="experience-shine"></div>
+                        <img src="image/experiences/freelancer.png" alt="">
+                    </div>
                     <h3>Freelancer</h3>
                     <p>Working as a <i class="work-title-freelancer">Freelancer</i></p>
                     <p class="subject">Part-time job</p>
@@ -257,7 +278,10 @@
                 </div>
 
                 <div class="box">
-                    <img src="image/experiences/enosis.png" alt="">
+                    <div class="experience-img-container">
+                        <div class="experience-shine"></div>
+                        <img src="image/experiences/enosis.png" alt="">
+                    </div>
                     <h3>Enosis Solutions</h3>
                     <p>Working as a <i class="work-title-enosis">Software Engineer</i></p>
                     <p class="subject">Full-time job</p>
@@ -269,7 +293,7 @@
     </section>
 
     <section class="portfolio" id="portfolio">
-        <h1 class="heading"> my <span>portfolio</span> </h1>
+        <h1 class="heading"> My <span>Projects</span> </h1>
         <div class="box-container" id="portfolio-container">
         </div>
     </section>
@@ -408,7 +432,10 @@
         function createCertificateBox(title, institution, date, imgPath, description){
             return '<div class="box">'+
                         '<div class="certificate-content">'+
-                            '<img src="'+imgPath+'" alt="">'+
+                            '<div class="certificate-img-container">'+
+                                '<div class="certificate-shine"></div>'+
+                                '<img src="'+imgPath+'" alt="">'+
+                            '</div>'+
                             '<h3>'+title+'</h3>'+
                             '<p class="subject">'+institution+'</p>'+
                             '<p class="date">'+date+'</p>'+

@@ -7,27 +7,23 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin-top: 35px;
-    margin-bottom: 15px;
+    margin-top: 2rem;
     padding: 2rem;
 }
 
 .copyright-holder .copyright-top-border {
-
     border-top: var(--border);
     width: 70%;
     margin-bottom: 15px;
 }
 
 .copyright-holder .copyright-top-border .star-box {
-
     width: 100%;
     position: relative;
     background: transparent;
 }
 
 .copyright-holder .copyright-top-border .star-holder {
-
     width: 8px;
     height: 8px;
     position: absolute;
@@ -39,11 +35,9 @@
 }
 
 @keyframes start-shinning-move {
-
     from {
         left: 0%;
     }
-
     to {
         left: 100%;
     }
@@ -63,19 +57,15 @@
         transform: rotate(0deg);
         fill: rgba(56, 71, 71, 0);
     }
-
     25% {
         fill: rgba(56, 71, 71, 0);
     }
-
     50% {
         fill: white;
     }
-
     75% {
         fill: rgba(56, 71, 71, 0);
     }
-
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
@@ -89,19 +79,15 @@
         transform: rotate(0deg);
         fill: rgba(56, 71, 71, 0);
     }
-
     25% {
         fill: rgba(56, 71, 71, 0);
     }
-
     50% {
         fill: white;
     }
-
     75% {
         fill: rgba(56, 71, 71, 0);
     }
-
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
@@ -110,25 +96,20 @@
 }
 
 @keyframes spin {
-
     0% {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
         fill: rgba(56, 71, 71, 0);
     }
-
     25% {
         fill: rgba(56, 71, 71, 0);
     }
-
     50% {
         fill: white;
     }
-
     75% {
         fill: rgba(56, 71, 71, 0);
     }
-
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
@@ -155,14 +136,11 @@
 }
 
 .heart-icon-holder path {
-
     fill: transparent;
     stroke-width: 20;
     stroke: #ff008c;
-
     stroke-dasharray: 1560;
     stroke-dashoffset: 0;
-
     animation: animate-heart 4s linear infinite;
 }
 
@@ -170,21 +148,17 @@
     0% {
         stroke-dashoffset: 0;
     }
-
     15% {
         stroke-dashoffset: 1560;
     }
-
     30% {
         stroke-dashoffset: 3120;
         fill: transparent;
     }
-
     45% {
         stroke-dashoffset: 3120;
         fill: rgb(255, 30, 116);
     }
-
     100% {
         stroke-dashoffset: 3120;
         fill: rgb(255, 30, 116);

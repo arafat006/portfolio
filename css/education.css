@@ -29,12 +29,41 @@
     background-color: var(--light-blue);
 }
 
-.education .row .box-container .box img{
+.education .row .box-container .education-img-container{
+    position: relative;
     margin-bottom: 1.2rem;
-    border: 1rem solid transparent;
+    border: 0.5rem solid transparent;
     border-radius: 50%;
     height: 6rem;
     width: 6rem;
+    box-shadow: var(--box-shadow);
+    margin: 0px auto 1.2rem auto;
+    overflow: hidden;
+}
+
+.education .education-img-container .education-shine{
+    position: absolute;
+    width: 40px;
+    height: 100%;
+    transform: skewX(-30deg);
+    animation-name: shinningAnimator;
+    animation-duration: 2.2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: .1s;
+    animation-iteration-count: infinite;
+    background: rgba(255, 255, 255, 0.3);
+    background: linear-gradient(to right,
+            rgba(255, 255, 255, 0.13) 0%,
+            rgba(255, 255, 255, 0.13) 77%,
+            rgba(255, 255, 255, 0.5) 92%,
+            rgba(255, 255, 255, 0.0) 100%); 
+}
+
+.education .row .box-container .box img{
+    margin-bottom: 1.2rem;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
     box-shadow: var(--box-shadow);
 }
 
