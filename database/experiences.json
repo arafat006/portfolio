@@ -1,0 +1,32 @@
+[
+    {
+        "organisation": "Upwork",
+        "professionPreText": "Working as a",
+        "profession": "Freelancer",
+        "jobType": "Part-time job",
+        "date": "Sep 2020 - Running",
+        "imgPath": "image/experiences/upwork.png",
+        "highlightedColor": "#009f2d",
+        "link": "https://www.upwork.com/freelancers/~017360a3afc795a1a5"
+    },
+    {
+        "organisation": "Freelancer",
+        "professionPreText": "Working as a",
+        "profession": "Freelancer",
+        "jobType": "Part-time job",
+        "date": "Sep 2020 - Running",
+        "imgPath": "image/experiences/freelancer.png",
+        "highlightedColor": "#00829f",
+        "link": "https://www.freelancer.com/u/arrow006"
+    },
+    {
+        "organisation": "Enosis Solutions",
+        "professionPreText": "Working as a",
+        "profession": "Software Engineer",
+        "jobType": "Full-time job",
+        "date": "Dec 2021 - Running",
+        "imgPath": "image/experiences/enosis.png",
+        "highlightedColor": "#9f004d",
+        "link": "https://www.enosisbd.com"
+    }
+]

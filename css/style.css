@@ -285,9 +285,9 @@ section#home{
     color:#4064AC;
 }
 
-.home .share a.fa-twitter:hover{
+.home .share a.fa-leetcode:hover{
     box-shadow: var(--box-shadow-inset);
-    color:#41B7E8;
+    color:#e87641;
 }
 
 .home .share a.fa-linkedin:hover{

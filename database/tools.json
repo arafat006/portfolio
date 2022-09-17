@@ -5,7 +5,8 @@
     },
     {
         "title": "Visual Studio Code",
-        "imgPath": "image/tools/vscode.png"
+        "imgPath": "image/tools/vscode.png",
+        "size": "large"
     },
     {
         "title": "Code Blocks",
@@ -37,7 +38,8 @@
     },
     {
         "title": "Pivotal Tracker",
-        "imgPath": "image/tools/pivotaltracker.png"
+        "imgPath": "image/tools/pivotaltracker.png",
+        "size": "large"
     },
     {
         "title": "Discord",
@@ -45,7 +47,8 @@
     },
     {
         "title": "Notepad++",
-        "imgPath": "image/tools/notepad++.png"
+        "imgPath": "image/tools/notepad++.png",
+        "size": "large"
     },
     {
         "title": "Slack",
@@ -69,6 +72,7 @@
     },
     {
         "title": "Android Studio",
-        "imgPath": "image/tools/androidstudio.png"
+        "imgPath": "image/tools/androidstudio.png",
+        "size": "large"
     }
 ]

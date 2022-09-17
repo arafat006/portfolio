@@ -14,6 +14,10 @@
     flex-wrap: wrap;
 }
 
+.education #education-container .vertical-line:first-child{
+    display: none;
+}
+
 .education .row .box-container .box{
     max-width: fit-content;
     flex:1 1 18rem;

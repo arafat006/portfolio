@@ -74,6 +74,8 @@
     padding: 5px;
     z-index: 1;
     transform: translate(-8rem, -8rem) rotate(-45deg);
+
+    padding: 4rem;
 }
 
 .tools .skill-box .skill-box-border:hover > .title{

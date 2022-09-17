@@ -1,0 +1,56 @@
+[
+    {
+        "title": "Web Design",
+        "icon": "fas fa-code",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quas delectus, laboriosam nulla dolore in.",
+        "hoverColor": "rgb(0, 255, 136)"
+    },
+    {
+        "title": "Web Application",
+        "icon": "fas fa-globe",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quas delectus, laboriosam nulla dolore in.",
+        "hoverColor": "rgb(0, 255, 208)"
+    },
+    {
+        "title": "Mobile Application",
+        "icon": "fas fa-mobile-alt",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quas delectus, laboriosam nulla dolore in.",
+        "hoverColor": "rgb(142, 0, 251)"
+    },
+    {
+        "title": "Unity Games",
+        "icon": "fas fa-gamepad",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quas delectus, laboriosam nulla dolore in.",
+        "hoverColor": "rgb(0, 47, 255)"
+    },
+    {
+        "title": "Machine Learning",
+        "icon": "fas fa-robot",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quas delectus, laboriosam nulla dolore in.",
+        "hoverColor": "rgb(0, 255, 128)"
+    },
+    {
+        "title": "IOT Project",
+        "icon": "fas fa-lightbulb",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quas delectus, laboriosam nulla dolore in.",
+        "hoverColor": "rgb(255, 255, 0)"
+    },
+    {
+        "title": "Firebase apps",
+        "icon": "fas fa-fire",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quas delectus, laboriosam nulla dolore in.",
+        "hoverColor": "rgb(255, 230, 0)"
+    },
+    {
+        "title": "Responsive Design",
+        "icon": "fas fa-wrench",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quas delectus, laboriosam nulla dolore in.",
+        "hoverColor": "rgb(255, 98, 0)"
+    },
+    {
+        "title": "Bug Fix",
+        "icon": "fas fa-bug",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quas delectus, laboriosam nulla dolore in.",
+        "hoverColor": "rgb(255, 0, 0)"
+    }
+]
