@@ -1,6 +1,6 @@
 .programming .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
     gap: 3rem;
 }
 
@@ -18,11 +18,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-	width: 15rem;
     border-radius: 0.5rem;
     box-shadow: var(--box-shadow);
-    /* height: 100%; */
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .programming .programming-box {
@@ -31,7 +29,7 @@
     flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
-	width: 15rem;
+
     height: 100%;
 }
 
@@ -82,6 +80,7 @@
 }
 
 .programming .programming-box img{
+    border-radius: 10%;
 	width: 90%;
 	height: 90%;
 }
