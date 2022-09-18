@@ -1,19 +1,16 @@
 .programming .box-container{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
-    gap:3rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 3rem;
 }
 
 .programming .box-container .box{
-    border-radius: .5rem;
     position: relative;
     z-index: 0;
     display: flex;
-    flex-direction: column;
 	justify-content: center;
 	align-items: center;
-    box-shadow: var(--box-shadow);
-    max-width: max-content;
+    height: fit-content;
 }
 
 .programming .programming-box-parent {
@@ -21,21 +18,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-	width: 12rem;
-	height: 12rem;
-    margin: 1.5rem;
+	width: 15rem;
+    border-radius: 10%;
+    box-shadow: var(--box-shadow);
+    /* height: 100%; */
+    padding: 2rem;
 }
 
 .programming .programming-box {
 	position: relative;
     display: flex;
+    flex-direction: column;
 	justify-content: center;
-	align-items: center;
-	width: 12rem;
-	height: 12rem;
-	border-radius: 10%;
-	box-shadow: var(--box-shadow);
-	background: var(--bg-color);
+	align-items: flex-start;
+	width: 15rem;
+    height: 100%;
 }
 
 .programming .programming-box .programming-box-border {
@@ -46,9 +43,9 @@
 	width: 11rem;
 	height: 11rem;
 	border-radius: 10%;
-	/* box-shadow: var(--box-shadow);
-	background: var(--bg-color); */
-    /* border: 1px solid red; */
+
+	box-shadow: var(--box-shadow);
+	background: var(--bg-color);
 
     /* background-color: rgba(140, 236, 255, 0.22); */
     overflow: hidden;
@@ -88,9 +85,15 @@
 	height: 90%;
 }
 
-.programming .title{
+.programming .programming-title{
     font-size: 2rem;
     color:var(--black);
     font-style: bold;
-    margin-bottom: 1rem;
+    text-align: center;
+    margin-top: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 1.5rem;
+
+    line-height: 2.4rem;
 }

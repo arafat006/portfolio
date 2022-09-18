@@ -369,16 +369,16 @@
         function createProgrammingBox(programming){
             return '<div class="box">'+
                         '<div class="programming-box-parent">'+
-                            '<a href="'+ (programming.profileUrl == null ? "#" : programming.profileUrl) +'" target="_blank">'+
-                                '<div class="programming-box">'+
+                            '<div class="programming-box">'+
+                                '<a href="'+ (programming.profileUrl == null ? "#" : programming.profileUrl) +'" target="_blank">'+
                                     '<div class="programming-box-border">'+
                                         '<div class="title"> Solved: '+ programming.solved +' </div>'+
                                         '<img src="'+ programming.imgPath +'" alt="">'+
                                     '</div>'+
-                                '</div>'+
-                            '</a>'+
+                                '</a>'+
+                                '<h3 class="programming-title">'+ programming.title +'</h3>'+
+                            '</div>'+
                         '</div>'+
-                        '<h3 class="title">'+ programming.title +'</h3>'+
                     '</div>';
         }
 
