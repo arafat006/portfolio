@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Md. Arafat Hossain</title>
-    
+
     <link rel="shortcut icon" type="image/x-icon" href="image/about/favicon.ico?">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/footer.css">
 </head>
 
-<body>
+<body style="filter: blur(3px); -webkit-filter: blur(3px); position: fixed;">
 
     <header class="header">
         <div class="user">
@@ -115,24 +115,8 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="box-container">
-                <div class="box">
-                    <h3>3+</h3>
-                    <p>years of experience</p>
-                </div>
-                <div class="box">
-                    <h3>35</h3>
-                    <p>satisfied clients</p>
-                </div>
-                <div class="box">
-                    <h3>9000+</h3>
-                    <p>working hours</p>
-                </div>
-                <div class="box">
-                    <h3>300+</h3>
-                    <p>Cups of milk</p>
-                </div>
+        <div class="row" id="additional-info">
+            <div class="box-container" id="additional-info-container">
             </div>
         </div>
     </section>
@@ -260,6 +244,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
     <script>
+
+        var additionalInfoTriggered = false;
+
+        function createAdditionalInfoBox(additionalInfo){
+            return '<div class="box">' +
+                        '<h3><span class="counter" data-number="'+ additionalInfo.count +'">0</span>'+ (additionalInfo.overflow ? "+" : "") +'</h3>' +
+                        '<p>'+ additionalInfo.title +'</p>' +
+                    '</div>';
+        }
 
         function createEducationBox(education){
             return '<div class="vertical-line"></div>' +
@@ -399,7 +392,6 @@
 
         $(document).ready(function () {
 
-            //Skills creation
             var activeDeviceType = 0;
             var currentSkillList;
 
@@ -445,6 +437,15 @@
                     }
                 }
             }
+
+            //Additional Info creation
+            $.getJSON('database/additionalInfo.json', function(additionalInfoList){
+                additionalInfoList.forEach(additionalInfo => {
+                    $(createAdditionalInfoBox(additionalInfo)).appendTo('#additional-info-container');
+                });
+            }).fail(function(){
+                //Additional loading failed...
+            });
 
             //Education creation
             $.getJSON('database/education.json', function(educationList){
@@ -536,11 +537,83 @@
                 //Interests loading failed...
             });
 
+            $.getJSON('database/additionalInfo.json', function(additionalInfoList){
+
+                var customOffset = 70;
+
+                var hT = $('#additional-info').offset().top,
+                    hH = $('#additional-info').outerHeight(),
+                    wH = $(window).height(),
+                    wS = $(window).scrollTop();
+
+                if (!additionalInfoTriggered && wS > (hT + hH - wH - customOffset)) {
+
+                    additionalInfoTriggered = true;
+                    $(".counter").each(function (index) {
+                        var $this = $(this);
+                        $({
+                            countNum: $this.text()
+                        }).animate(
+                            {
+                                countNum: additionalInfoList[index].count
+                            },
+                            {
+                                duration: 2000,
+                                easing: "swing",
+                                step: function () {
+                                    $this.text(Math.ceil(this.countNum));
+                                },
+                                complete: function () {
+                                    $this.text(Math.ceil(this.countNum));
+                                }
+                            }
+                        );
+                    });
+                }
+
+                $(window).scroll(function () {
+                    var hT = $('#additional-info').offset().top,
+                        hH = $('#additional-info').outerHeight(),
+                        wH = $(window).height(),
+                        wS = $(this).scrollTop();
+                    
+                    if (!additionalInfoTriggered && wS > (hT + hH - wH - customOffset)) {
+
+                        additionalInfoTriggered = true;
+                        $(".counter").each(function (index) {
+                            var $this = $(this);
+
+                            $({
+                                countNum: $this.text()
+                            }).animate(
+                                {
+                                    countNum: additionalInfoList[index].count
+                                },
+                                {
+                                    duration: 2000,
+                                    easing: "swing",
+                                    step: function () {
+                                        $this.text(Math.ceil(this.countNum));
+                                    },
+                                    complete: function () {
+                                        $this.text(Math.ceil(this.countNum));
+                                    }
+                                }
+                            );
+                        });
+                    }
+                });
+            });
+
+            $(window).on('load', function(){
+                $('body').css({'-webkit-filter': 'unset','position': 'unset'});
+            });
+
             $(window).on('resize', function() {
                 drawSkillPercentCircle(currentSkillList);
             });
         });
-        
+
     </script>
 </body>
 
