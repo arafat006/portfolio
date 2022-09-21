@@ -1,21 +1,21 @@
 [
     {
-        "count": "3",
+        "count": 3,
         "title": "Years Of Experience",
         "overflow": true
     },
     {
-        "count": "35",
+        "count": 35,
         "title": "Satisfied Clients",
         "overflow": false
     },
     {
-        "count": "9000",
+        "count": 9000,
         "title": "Working Hours",
         "overflow": true
     },
     {
-        "count": "300",
+        "count": 300,
         "title": "Cups Of Milk",
         "overflow": true
     }

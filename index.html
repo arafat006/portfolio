@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/footer.css">
 </head>
 
-<body style="filter: blur(3px); -webkit-filter: blur(3px); position: fixed;">
+<body style="filter: blur(3px); -webkit-filter: blur(3px);" onload="onLoadBody()">
 
     <header class="header">
         <div class="user">
@@ -394,6 +394,7 @@
 
             var activeDeviceType = 0;
             var currentSkillList;
+            var additionalInfoAnimationDuration = 2500;
 
             const skillSvgRoundSmall = 251;
             const skillSvgRoundMedium = 328;
@@ -440,13 +441,86 @@
 
             //Additional Info creation
             $.getJSON('database/additionalInfo.json', function(additionalInfoList){
+
                 additionalInfoList.forEach(additionalInfo => {
                     $(createAdditionalInfoBox(additionalInfo)).appendTo('#additional-info-container');
                 });
+
+                var customOffset = 70;
+                var maxAdditionalLength = (Math.max(...additionalInfoList.map(a => a.count)).toString().length + 1) * 35;
+                $('#additional-info-container h3').css('min-width', maxAdditionalLength);
+                    
+                // $('#additional-info-container h3').each(function (index) {
+                //     $(this).css('min-width', (additionalInfoList[index].count.toString().length + 1) * 35);
+                // });
+
+                var hT = $('#additional-info').offset().top,
+                    hH = $('#additional-info').outerHeight(),
+                    wH = $(window).height(),
+                    wS = $(window).scrollTop();
+
+                if (!additionalInfoTriggered && wS > (hT + hH - wH - customOffset)) {
+
+                    additionalInfoTriggered = true;
+                    $(".counter").each(function (index) {
+                        var $this = $(this);
+                        $({
+                            countNum: $this.text()
+                        }).animate(
+                            {
+                                countNum: additionalInfoList[index].count
+                            },
+                            {
+                                duration: additionalInfoAnimationDuration,
+                                easing: "swing",
+                                step: function () {
+                                    $this.text(Math.ceil(this.countNum));
+                                },
+                                complete: function () {
+                                    $this.text(Math.ceil(this.countNum));
+                                }
+                            }
+                        );
+                    });
+                }
+
+                $(window).scroll(function () {
+                    var hT = $('#additional-info').offset().top,
+                        hH = $('#additional-info').outerHeight(),
+                        wH = $(window).height(),
+                        wS = $(this).scrollTop();
+                    
+                    if (!additionalInfoTriggered && wS > (hT + hH - wH - customOffset)) {
+
+                        additionalInfoTriggered = true;
+                        $(".counter").each(function (index) {
+                            var $this = $(this);
+
+                            $({
+                                countNum: $this.text()
+                            }).animate(
+                                {
+                                    countNum: additionalInfoList[index].count
+                                },
+                                {
+                                    duration: additionalInfoAnimationDuration,
+                                    easing: "swing",
+                                    step: function () {
+                                        $this.text(Math.ceil(this.countNum));
+                                    },
+                                    complete: function () {
+                                        $this.text(Math.ceil(this.countNum));
+                                    }
+                                }
+                            );
+                        });
+                    }
+                });
+
             }).fail(function(){
                 //Additional loading failed...
             });
-
+            
             //Education creation
             $.getJSON('database/education.json', function(educationList){
                 educationList.forEach(education => {
@@ -537,82 +611,14 @@
                 //Interests loading failed...
             });
 
-            $.getJSON('database/additionalInfo.json', function(additionalInfoList){
-
-                var customOffset = 70;
-
-                var hT = $('#additional-info').offset().top,
-                    hH = $('#additional-info').outerHeight(),
-                    wH = $(window).height(),
-                    wS = $(window).scrollTop();
-
-                if (!additionalInfoTriggered && wS > (hT + hH - wH - customOffset)) {
-
-                    additionalInfoTriggered = true;
-                    $(".counter").each(function (index) {
-                        var $this = $(this);
-                        $({
-                            countNum: $this.text()
-                        }).animate(
-                            {
-                                countNum: additionalInfoList[index].count
-                            },
-                            {
-                                duration: 2000,
-                                easing: "swing",
-                                step: function () {
-                                    $this.text(Math.ceil(this.countNum));
-                                },
-                                complete: function () {
-                                    $this.text(Math.ceil(this.countNum));
-                                }
-                            }
-                        );
-                    });
-                }
-
-                $(window).scroll(function () {
-                    var hT = $('#additional-info').offset().top,
-                        hH = $('#additional-info').outerHeight(),
-                        wH = $(window).height(),
-                        wS = $(this).scrollTop();
-                    
-                    if (!additionalInfoTriggered && wS > (hT + hH - wH - customOffset)) {
-
-                        additionalInfoTriggered = true;
-                        $(".counter").each(function (index) {
-                            var $this = $(this);
-
-                            $({
-                                countNum: $this.text()
-                            }).animate(
-                                {
-                                    countNum: additionalInfoList[index].count
-                                },
-                                {
-                                    duration: 2000,
-                                    easing: "swing",
-                                    step: function () {
-                                        $this.text(Math.ceil(this.countNum));
-                                    },
-                                    complete: function () {
-                                        $this.text(Math.ceil(this.countNum));
-                                    }
-                                }
-                            );
-                        });
-                    }
-                });
-            });
-
-            $(window).on('load', function(){
-                $('body').css({'-webkit-filter': 'unset','position': 'unset'});
-            });
-
             $(window).on('resize', function() {
                 drawSkillPercentCircle(currentSkillList);
             });
         });
+
+        function onLoadBody(){
+            $('body').css({'-webkit-filter': 'unset'});
+        }
 
     </script>
 </body>

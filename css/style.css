@@ -363,7 +363,6 @@ section#home{
     #menu-btn{
         display: initial;
     }
-
 }
 
 @media (max-width:450px){
@@ -376,5 +375,4 @@ section#home{
         width:100%;
         border-right: 0;
     }
-
 }
