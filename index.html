@@ -7,6 +7,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Md. Arafat Hossain</title>
 
+    <style>
+        #loader {
+            margin: 50px auto;
+            border: 5px double #f0eff5;
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            visibility: visible;
+            animation: spinningColor 1.5s ease-in-out infinite;
+        }
+
+        @keyframes spinningColor {
+            0% {
+                transform: rotate(360deg);
+                border-top:5px dashed #f56682;
+                border-bottom:5px dashed #387eff;
+            }
+            25% {
+                border-top:5px dashed #f591a6;
+                border-bottom:5px dashed #6da7f7;
+            }
+            50% {
+                border-top:5px dashed #fd878e;
+                border-bottom:5px dashed #4ba3ff;
+            }
+            75% {
+                border-top:5px dashed #f57f8f;
+                border-bottom:5px dashed #569dff;
+            }
+            100% {
+                border-top:5px dashed #f56682;
+                border-bottom:5px dashed #387eff;
+            }
+        } 
+    </style>
+
     <link rel="shortcut icon" type="image/x-icon" href="image/about/favicon.ico?">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -24,7 +66,9 @@
     <link rel="stylesheet" href="css/footer.css">
 </head>
 
-<body style="filter: blur(3px); -webkit-filter: blur(3px);" onload="onLoadBody()">
+<body style="visibility: hidden" onload="onLoadBody()">
+
+    <div id="loader"></div>
 
     <header class="header">
         <div class="user">
@@ -245,8 +289,6 @@
 
     <script>
 
-        var additionalInfoTriggered = false;
-
         function createAdditionalInfoBox(additionalInfo){
             return '<div class="box">' +
                         '<h3><span class="counter" data-number="'+ additionalInfo.count +'">0</span>'+ (additionalInfo.overflow ? "+" : "") +'</h3>' +
@@ -259,7 +301,9 @@
                     '<div class="box">' +
                         '<div class="education-img-container">' +
                             '<div class="education-shine"></div>' +
-                            '<img src="'+ education.imgPath +'" alt="">' +
+                            '<a href="'+ education.institutionSiteUrl +'" target="_blank">' +
+                                '<img src="'+ education.imgPath +'" alt="">' +
+                            '</a>' +
                         '</div>' +
                         '<h3>'+ education.institution +'</h3>' +
                         '<p>'+ education.certificate +'</p>' +
@@ -278,7 +322,7 @@
         }
 
         function createSkillBox(index, title, imgPath, percent){
-            return '<div class="box">' +
+            return '<div class="box" ' + (index == 1 ? 'id="skill-first"' : "") + '>' +
                 '<div class="card__percent">' +
                     '<svg>' +
                         '<defs>' +
@@ -394,7 +438,10 @@
 
             var activeDeviceType = 0;
             var currentSkillList;
+            var customOffset = 70;
             var additionalInfoAnimationDuration = 2500;
+            var additionalInfoTriggered = false;
+            var skillsTriggered = false;
 
             const skillSvgRoundSmall = 251;
             const skillSvgRoundMedium = 328;
@@ -418,6 +465,24 @@
                 }
                 else {
                     return deviceWidth.large;
+                }
+            }
+
+            function drawInitialSkillPercentCircle(skillList){
+                var deviceType = getDeviceType();
+
+                if (activeDeviceType != deviceWidth.small && deviceType == deviceWidth.small) {
+                    for (var index = 0; index < skillList.length; index++) {
+                        $(document).find('#circle' + (index + 1)).css({ 'stroke-dashoffset': skillSvgRoundSmall });
+                    }
+                } else if (activeDeviceType != deviceWidth.medium && deviceType == deviceWidth.medium) {
+                    for (var index = 0; index < skillList.length; index++) {
+                        $(document).find('#circle' + (index + 1)).css({ 'stroke-dashoffset': skillSvgRoundMedium  });
+                    }
+                } else if (activeDeviceType != deviceWidth.large && deviceType == deviceWidth.large) {
+                    for (var index = 0; index < skillList.length; index++) {
+                        $(document).find('#circle' + (index + 1)).css({ 'stroke-dashoffset': skillSvgRoundLarge });
+                    }
                 }
             }
 
@@ -446,7 +511,6 @@
                     $(createAdditionalInfoBox(additionalInfo)).appendTo('#additional-info-container');
                 });
 
-                var customOffset = 70;
                 var maxAdditionalLength = (Math.max(...additionalInfoList.map(a => a.count)).toString().length + 1) * 35;
                 $('#additional-info-container h3').css('min-width', maxAdditionalLength);
                     
@@ -548,11 +612,35 @@
             //Skills creation
             $.getJSON('database/skills.json', function(skillList){
                 currentSkillList = skillList;
-                for(var index=0; index< skillList.length; index++){
-                    $(createSkillBox(index+1, skillList[index].title, skillList[index].imgPath, skillList[index].percent)).appendTo('#skills-container');
+                
+                for(var index = 0; index < skillList.length; index++){
+                    $(createSkillBox(index + 1, skillList[index].title, skillList[index].imgPath, skillList[index].percent)).appendTo('#skills-container');
                 }
 
-                drawSkillPercentCircle(skillList);
+                drawInitialSkillPercentCircle(skillList);
+
+                var hT = $('#skill-first').offset().top,
+                    hH = $('#skill-first').outerHeight(),
+                    wH = $(window).height(),
+                    wS = $(window).scrollTop();
+
+                if (!skillsTriggered && wS > (hT + hH - wH)) {
+                    skillsTriggered = true;
+                    drawSkillPercentCircle(skillList);
+                }
+
+                $(window).scroll(function () {
+                    var hT = $('#skill-first').offset().top,
+                        hH = $('#skill-first').outerHeight(),
+                        wH = $(window).height(),
+                        wS = $(this).scrollTop();
+                    
+                    if (!skillsTriggered && wS > (hT + hH - wH)) {
+                        skillsTriggered = true;
+                        drawSkillPercentCircle(skillList);
+                    }
+                });
+
             }).fail(function(){
                 //Skills loading failed...
             }); 
@@ -617,7 +705,8 @@
         });
 
         function onLoadBody(){
-            $('body').css({'-webkit-filter': 'unset'});
+            $('#loader').css({'display': 'none'});
+            $('body').css({'visibility': 'visible'});
         }
 
     </script>

@@ -78,7 +78,7 @@
 	fill: none;
 	stroke-linecap: round;
 	transform: translate(.88rem, .88rem);
-	transition: all 1s ease;
+	transition: all 2s ease;
 	stroke-width: 6;
 }
 

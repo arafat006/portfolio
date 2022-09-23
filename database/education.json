@@ -5,7 +5,8 @@
         "subject": "Science",
         "date": "Jan 2005 - May 2014",
         "grade": "G.P.A 5.00 (Out of 5.00)",
-        "imgPath": "image/education/rajshahi_collegiate_school.jpg"
+        "imgPath": "image/education/rajshahi_collegiate_school.jpg",
+        "institutionSiteUrl": "https://rcs.edu.bd"
     },
     {
         "institution": "Rajshahi Government City College",
@@ -13,7 +14,8 @@
         "subject": "Science",
         "date": "Jun 2014 - Aug 2016",
         "grade": "G.P.A 5.00 (Out of 5.00)",
-        "imgPath": "image/education/rajshahi_city_college.jpeg"
+        "imgPath": "image/education/rajshahi_city_college.jpeg",
+        "institutionSiteUrl": "https://rgcc.ac.bd"
     },
     {
         "institution": "United International University",
@@ -21,6 +23,7 @@
         "subject": "Computer Science & Engineering",
         "date": "Feb 2017 - Aug 2021",
         "grade": "C.G.P.A 3.80 (Out of 4.00)",
-        "imgPath": "image/education/uiu.png"
+        "imgPath": "image/education/uiu.png",
+        "institutionSiteUrl": "https://www.uiu.ac.bd"
     }
 ]
