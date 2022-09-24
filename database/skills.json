@@ -198,5 +198,10 @@
         "title": "Adobe XD",
         "imgPath": "image/skills/xd.png",
         "percent": 70
+    },
+    {
+        "title": "Proteus",
+        "imgPath": "image/skills/proteus.png",
+        "percent": 65
     }
 ]

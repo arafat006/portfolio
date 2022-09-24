@@ -26,6 +26,14 @@
     transition: .2s linear;
 }
 
+.swal2-popup {
+    font-size: 1.4rem !important;
+}
+
+.swal2-timer-progress-bar {
+    background: rgb(0 206 255 / 60%) !important;
+}
+
 html{
     font-size: 62.5%;
     overflow-x: hidden;
@@ -327,6 +335,18 @@ section#home{
 
 .contact form .box:focus{
     box-shadow: var(--box-shadow-inset);
+}
+
+.sending-message{
+    margin-top: 1rem;
+    display: inline-block;
+    padding:1rem 3.5rem;
+    border-radius: .5rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color:var(--black);
+    box-shadow: var(--box-shadow);
+    background: #ff6c0070;
 }
 
 .credits{

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md. Arafat Hossain</title>
+    <title>MD. Arafat Hossain</title>
 
     <style>
         #loader {
@@ -14,7 +14,7 @@
             border-radius: 50%;
             width: 70px;
             height: 70px;
-            position: absolute;
+            position: fixed;
             top: 0;
             bottom: 0;
             left: 0;
@@ -52,6 +52,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="image/about/favicon.ico?">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/education.css">
@@ -121,7 +122,7 @@
         <h1 class="heading"> <span>About</span> Me </h1>
         <div class="row">
             <div class="content">
-                <h3>My name is <span>Md. Arafat Hossain</span></h3>
+                <h3>My name is <span>MD. Arafat Hossain</span></h3>
                 <p>
                     I'm an expert at full-stack web development, currently working as a full-time Software Engineer at Enosis Solutions. 
                     I also develop mobile apps as a hobby. 
@@ -155,7 +156,7 @@
                             <b>• End To End Test:</b> Testing all end-points to verify security and ensure data passing ability.
                         </p>
                 </p>
-                <a href="#" class="btn">contact me</a>
+                <a href="#contact" class="btn">contact me</a>
             </div>
         </div>
 
@@ -227,12 +228,12 @@
 
     <section class="contact" id="contact">
         <h1 class="heading"> <span>contact</span> me </h1>
-        <form action="mailto:arafathossainarafat6@gmail.com" method="post" enctype="text/plain">
-            <input type="text" placeholder="your name" class="box">
-            <input type="email" placeholder="your email" class="box">
-            <input type="text" placeholder="subject" class="box">
-            <textarea name="" class="box" placeholder="your message" name="comment" cols="30" rows="10"></textarea>
-            <input type="submit" value="send message" class="btn">
+        <form onsubmit="return false">
+            <input type="text" placeholder="your name" id="form-name" class="box">
+            <input type="email" placeholder="your email" id="form-email" class="box">
+            <input type="text" placeholder="subject" id="form-subject" class="box">
+            <textarea name="" id="form-message" class="box" placeholder="your message" name="comment" cols="30" rows="10"></textarea>
+            <input type="submit" value="send message" class="btn" id="send-message">
         </form>
     </section>
 
@@ -286,6 +287,7 @@
 
     <script src="js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
 
     <script>
 
@@ -702,6 +704,120 @@
             $(window).on('resize', function() {
                 drawSkillPercentCircle(currentSkillList);
             });
+
+            // SEND MESSAGE TRIGGER
+            var enableSubmitButton = true;
+            var toastTimer = 3000;
+            var sendMessageErrorDelay = 1000;
+            var sendMessageSuccessDelay = 3000;
+
+            var sendMessageButton = $('#send-message');
+            var formName = $('#form-name');
+            var formEmail = $('#form-email');
+            var formSubject = $('#form-subject');
+            var formMessage = $('#form-message');
+
+            var $regexName = /^(([a-zA-Z.]+\s)*[a-zA-Z]+){3,20}$/;
+            var $regexEmail = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+            var $regexSubject = /^([a-zA-Z0-9]+\s)*([a-zA-Z0-9])+$/;
+
+            var mixinToast = Swal.mixin({
+                toast: true,
+                icon: 'success',
+                showConfirmButton: false,
+                timer: toastTimer,
+                timerProgressBar: true,
+                showCancelButton:false
+            });
+
+            function postSuccessToastPopup(){
+                mixinToast.fire({
+                    icon: 'success',
+                    animation: true,
+                    title: 'Posted successfully',
+                    position: 'top-right'
+                });
+            }
+
+            function validationErrorToastPopup(errorTitle){
+                mixinToast.fire({
+                    icon: 'error',
+                    animation: true,
+                    title: errorTitle,
+                    position: 'top-right'
+                });
+            }
+
+            function onSendSuccess() {
+                setTimeout(function() {
+                    formName.val('');
+                    formEmail.val('');
+                    formSubject.val('');
+                    formMessage.val('');
+
+                    enableSubmitButton = true;
+                    sendMessageButton.addClass('btn');
+                    sendMessageButton.removeClass('sending-message');
+                    sendMessageButton.val('send message');
+
+                    postSuccessToastPopup();
+                }, sendMessageSuccessDelay);
+            }
+
+            function onSendError(errorTitle) {
+                setTimeout(function() {
+                    enableSubmitButton = true;
+                    sendMessageButton.addClass('btn');
+                    sendMessageButton.removeClass('sending-message');
+                    sendMessageButton.val('send message');
+
+                    validationErrorToastPopup(errorTitle);
+                }, sendMessageErrorDelay);
+            }
+
+            function createJsonObjectFromMessage(name, email, subject, message) {
+                return { 
+                    name: name, 
+                    email: email, 
+                    subject: subject, 
+                    message: message
+                };
+            }
+
+            sendMessageButton.click(function(){
+
+                if(!enableSubmitButton) {
+                    return;
+                }
+                
+                enableSubmitButton = false;
+                sendMessageButton.addClass('sending-message');
+                sendMessageButton.removeClass('btn');
+                sendMessageButton.val('sending...');
+
+                if (!formName.val().match($regexName)) {
+                    onSendError("Invalid Name");
+                    return;
+                }
+
+                if (!formEmail.val() || !formEmail.val().match($regexEmail)) {
+                    onSendError("Invalid Email");
+                    return;
+                }
+
+                if (!formSubject.val() || !formSubject.val().match($regexSubject)) {
+                    onSendError("Invalid Subject");
+                    return;
+                }
+
+                if (!formMessage.val()) {
+                    onSendError("Invalid Message");
+                    return;
+                }
+
+                onSendSuccess();
+            });
+
         });
 
         function onLoadBody(){

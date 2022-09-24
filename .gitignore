@@ -12,3 +12,4 @@
 # misc
 package.json
 package-lock.json
+.vscode/settings.json
