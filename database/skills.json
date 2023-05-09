@@ -95,6 +95,11 @@
         "percent": 96
     },
     {
+        "title": "React",
+        "imgPath": "image/skills/react.png",
+        "percent": 70
+    },
+    {
         "title": ".Net Core",
         "imgPath": "image/skills/dotnetcore.png",
         "percent": 96
@@ -157,6 +162,11 @@
     {
         "title": "Microsoft SQL",
         "imgPath": "image/skills/mssql.png",
+        "percent": 90
+    },
+    {
+        "title": "PostgreSQL",
+        "imgPath": "image/skills/postgres.png",
         "percent": 90
     },
     {
